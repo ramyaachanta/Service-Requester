@@ -1,0 +1,35 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Floating Cartoon PNGs */
+.floating-item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  animation: floatAnimation 6s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Character Image Styling - No Circle, Just PNG */
+.character-img {
+  width: 300px;  /* Bigger and looks better */
+  height: auto;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2)); /* Soft shadow */
+}
+
+.character-img:hover {
+  filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.4)); /* Stronger glow on hover */
+  transform: scale(1.1);
+}
